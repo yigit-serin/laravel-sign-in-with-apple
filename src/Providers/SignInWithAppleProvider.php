@@ -117,8 +117,6 @@ class SignInWithAppleProvider extends AbstractProvider implements ProviderInterf
             ->map([
                 "id" => $user["sub"],
                 "name" => $fullName ?? null,
-                "firstName" => $user["name"]['firstName'] ?? null,
-                "lastName" => $user["name"]['lastName'] ?? null,
                 "email" => $user["email"] ?? null,
             ]);
     }
